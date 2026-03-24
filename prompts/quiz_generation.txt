@@ -1,0 +1,16 @@
+Generate exactly {num_questions} multiple-choice quiz questions about {topic} for {level} learners.
+
+Requirements:
+- Each question must have exactly 4 answer options
+- Exactly one option must be correct
+- Include a clear explanation for why the correct answer is right
+- Questions should test understanding, not just memorization
+- Vary the difficulty within the {level} skill level
+
+Respond with a JSON array. Each element must be an object with these exact keys:
+- "question": the question text (string)
+- "options": array of exactly 4 option strings
+- "correct_answer": the correct option (must exactly match one of the options)
+- "explanation": explanation of why the answer is correct (string)
+
+Respond ONLY with the JSON array. No other text.

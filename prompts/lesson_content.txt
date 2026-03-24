@@ -1,0 +1,13 @@
+Create a comprehensive lesson about {topic} for {level} learners.
+
+The lesson should cover the following learning objectives:
+{objectives}
+
+Requirements:
+- Write in clear, accessible Markdown format
+- Include practical code examples with syntax highlighting
+- Explain concepts step by step
+- Include a "Key Takeaways" section at the end
+- Use headers (##, ###) to organize the content
+- Keep explanations concise but thorough
+- Target the content at the {level} skill level
