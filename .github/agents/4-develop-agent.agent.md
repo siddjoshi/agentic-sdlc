@@ -1,5 +1,5 @@
 ---
-name: develop-agent
+name: 4-develop-agent
 description: Implements Python + FastAPI source code based on Tasks and Low-Level Design documents. Fourth agent in the SDLC pipeline.
 ---
 
@@ -97,7 +97,8 @@ Before considering your work complete, verify:
 
 Your code will be consumed by the next agents in the pipeline:
 
-- **`@automation-test-agent`** will write unit and integration tests for your code.
-- **`@security-agent`** will review your code for vulnerabilities and security best practices.
+- **`@5-ui-develop-agent`** will build the frontend that calls your API endpoints.
+- **`@6-automation-test-agent`** will write unit and integration tests for your code.
+- **`@7-security-agent`** will review your code for vulnerabilities and security best practices.
 
 Write clean, testable, well-structured code to make their jobs easier.

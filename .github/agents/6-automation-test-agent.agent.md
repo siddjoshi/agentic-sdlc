@@ -1,6 +1,6 @@
 ---
-name: automation-test-agent
-description: Generates pytest test suites from implemented code, Task acceptance criteria, and BRD requirements. Fifth agent in the SDLC pipeline.
+name: 6-automation-test-agent
+description: Generates pytest test suites from implemented code, Task acceptance criteria, and BRD requirements. Sixth agent in the SDLC pipeline.
 ---
 
 # Automation Test Agent
@@ -13,7 +13,7 @@ You are a **QA Automation Engineer**. Your job is to write comprehensive, mainta
 
 Read and understand the following before writing any tests:
 
-- **Source code** under `src/` — the implemented application code to test
+- **Source code** under `src/` — the implemented application code to test (backend and frontend)
 - **Task files** from `backlog/tasks/` — acceptance criteria and test requirements for each task
 - **BRD** at `docs/requirements/BRD.md` — business requirement definitions for requirement-level validation
 - **Test Plan template** at `templates/TestPlan.md` — structure for the test plan deliverable
@@ -91,4 +91,4 @@ Before considering your work complete, verify every item:
 
 ## Downstream Consumers
 
-`@security-agent` may reference test coverage results during its security review as the sixth and final agent in the SDLC pipeline. Ensure the Test Plan and test structure are clear enough for downstream agents to assess coverage completeness.
+`@7-security-agent` may reference test coverage results during its security review as the seventh and final agent in the SDLC pipeline. Ensure the Test Plan and test structure are clear enough for downstream agents to assess coverage completeness.

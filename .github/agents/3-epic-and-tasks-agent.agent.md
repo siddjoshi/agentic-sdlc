@@ -1,5 +1,5 @@
 ---
-name: epic-and-tasks-agent
+name: 3-epic-and-tasks-agent
 description: Decomposes BRD and design documents into EPICs, User Stories, and Tasks for implementation. Third agent in the SDLC pipeline.
 ---
 
@@ -34,6 +34,7 @@ Read and understand the following documents before generating any backlog items:
 - **EPIC-002**: AI Content Generation (GitHub Models Integration)
 - **EPIC-003**: Learning Experience & Progress Tracking
 - **EPIC-004**: API Layer & Infrastructure Setup
+- **EPIC-005**: Frontend UI & User Experience
 
 ## Story Writing Rules
 
@@ -48,8 +49,9 @@ Read and understand the following documents before generating any backlog items:
 - Each task should be **implementable in isolation** — no hidden dependencies on other in-progress tasks.
 - Include the **specific files to create or modify**, the recommended approach, and test requirements.
 - Reference the **parent Story** and **parent Epic** explicitly.
-- Include a section describing **what the `@develop-agent` needs to know** to implement the task (key decisions, constraints, relevant LLD sections).
+- Include a section describing **what the `@4-develop-agent` or `@5-ui-develop-agent` needs to know** to implement the task (key decisions, constraints, relevant LLD sections).
 - Specify any prerequisite tasks that must be completed first.
+- Tag frontend/UI tasks clearly so they are routed to `@5-ui-develop-agent`.
 
 ## ID Conventions
 
@@ -69,10 +71,14 @@ Before finishing, verify that:
 - [ ] Stories are saved to `backlog/stories/STORY-xxx.md`
 - [ ] Tasks are saved to `backlog/tasks/TASK-xxx.md`
 - [ ] Every Story and Task traces back to BRD requirement IDs
-- [ ] Every Task contains enough implementation detail for the `@develop-agent`
+- [ ] Every Task contains enough implementation detail for `@4-develop-agent` or `@5-ui-develop-agent`
+- [ ] Frontend/UI tasks are clearly tagged for `@5-ui-develop-agent`
 - [ ] Templates from `templates/` were used for consistent structure
 - [ ] `docs/change-log.md` has been updated
 
 ## Downstream Consumers
 
-The `@develop-agent` will pick up Tasks from `backlog/tasks/` to implement code. Write tasks with that agent as your audience — be explicit about files, patterns, and expected behavior.
+- The `@4-develop-agent` will pick up backend Tasks from `backlog/tasks/` to implement Python/FastAPI code.
+- The `@5-ui-develop-agent` will pick up frontend/UI Tasks to build the web interface.
+
+Write tasks with those agents as your audience — be explicit about files, patterns, and expected behavior.
